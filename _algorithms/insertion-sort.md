@@ -1,7 +1,7 @@
 ---
 title: "Insertion Sort"
 difficulty: Easy
-tags: [sorting, array, in-place]
+tags: [array, in-place, sorting, stable]
 ---
 
 # Insertion Sort
@@ -31,7 +31,7 @@ Insertion Sort builds a sorted prefix of the array one element at a time. For ea
 ## Complexity
 - Time: Best `O(n)`, Average `O(n^2)`, Worst `O(n^2)`
 - Space: `O(1)`
-- Notes: Stable and in-place; best case happens when the input is already sorted.
+- Notes: Stable and in-place. In this implementation, stability comes from shifting only when `nums[j] > key` (not `>=`), so equal elements keep their relative order.
 
 ## Java implementation
 ```java

@@ -1,7 +1,7 @@
 ---
 title: "Selection Sort"
 difficulty: Easy
-tags: [sorting, array, in-place]
+tags: [array, in-place, sorting]
 ---
 
 # Selection Sort
@@ -31,7 +31,7 @@ Selection Sort repeatedly selects the minimum element from the unsorted part of 
 ## Complexity
 - Time: Best `O(n^2)`, Average `O(n^2)`, Worst `O(n^2)`
 - Space: `O(1)`
-- Notes: In-place and usually not stable. Compared to insertion sort, it has the same worst-case `O(n^2)` but a worse best-case: selection sort stays `O(n^2)` while insertion sort can be `O(n)` on nearly/already sorted input.
+- Notes: In-place but not stable in the standard swap-based version. A swap can move a later equal element before an earlier one, changing their relative order. Compared to insertion sort, it has the same worst-case `O(n^2)` but a worse best-case: selection sort stays `O(n^2)` while insertion sort can be `O(n)` on nearly/already sorted input.
 
 ## Java implementation
 ```java
