@@ -1,7 +1,7 @@
 ---
 title: "Merge Sort"
 difficulty: Medium
-tags: [sorting, divide-and-conquer, recursion, stable]
+tags: [sorting, array, divide-and-conquer, recursion, stable]
 ---
 
 # Merge Sort
