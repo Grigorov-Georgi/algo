@@ -1,0 +1,16 @@
+title: Algo Notes
+description: Algorithms I have learned and practiced.
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+collections:
+  algorithms:
+    output: true
+    permalink: /algorithms/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: algorithms
+    values:
+      layout: default
