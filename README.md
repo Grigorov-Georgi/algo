@@ -1,55 +1,55 @@
-# Algo Notes with GitHub Pages
+# Algo Notes (GitHub Pages)
 
-This repo is configured as a Markdown-based site using Jekyll and GitHub Pages.
+Personal algorithm notes site powered by Jekyll + GitHub Pages.
 
-## Structure
+## Repo layout
 
-- `_algorithms/` -> your algorithm notes
-- `algorithms-list.md` -> auto-generated list page
-- `index.md` -> homepage
-- `_config.yml` -> site config
-- `.github/workflows/pages.yml` -> automatic deployment
+- `_algorithms/` - one Markdown page per algorithm
+- `algorithms-list.md` - auto-generated list of all algorithms
+- `index.md` - homepage
+- `_config.yml` - Jekyll config and collection setup
+- `.github/workflows/pages.yml` - automatic Pages deployment
+- `ALGORITHM_PAGE_TEMPLATE.local.md` - local prompt/template for generating new pages (git-ignored)
 
-## Add a new algorithm note
+## Algorithm page format
 
-Create a file in `_algorithms/`, for example:
+Each algorithm page should follow the structure in `ALGORITHM_PAGE_TEMPLATE.local.md` and include:
 
-`_algorithms/binary-search.md`
+- clear Java 17 implementation
+- short intuition
+- when to use / not use
+- complexity (best/avg/worst where relevant)
+- pitfalls and edge cases
+- worked example
+- Java demo tests
 
-Use this template:
+## Add a new algorithm page
+
+1. Create `_algorithms/<algorithm-slug>.md`
+2. Use frontmatter:
 
 ```md
 ---
-title: Binary Search
+title: "Algorithm Name"
 difficulty: Easy
-tags: [binary-search, array]
+tags: [tag1, tag2]
 ---
-
-## Problem
-...
-
-## Key idea
-...
-
-## Complexity
-- Time: O(log n)
-- Space: O(1)
 ```
 
-It will appear automatically on `/algorithms-list/`.
+3. Fill the rest using the template structure.
+4. Save and commit; it appears automatically on `/algorithms-list/`.
 
-## Deploy on GitHub Pages
+## Deploy
 
-1. Create a GitHub repo and push this project to `main`.
-2. In GitHub: `Settings -> Pages`.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Push changes to `main`; the workflow deploys automatically.
-5. Your site URL will be:
-   `https://<your-username>.github.io/<repo-name>/`
+1. Push to `main`.
+2. In GitHub go to `Settings -> Pages`.
+3. Set **Source** to **GitHub Actions**.
+4. Every push to `main` triggers deployment via `.github/workflows/pages.yml`.
+
+Site URL:
+`https://<your-username>.github.io/<repo-name>/`
 
 ## Optional local preview
-
-If you want local preview:
 
 ```bash
 bundle exec jekyll serve

@@ -6,6 +6,14 @@ tags: [sorting, array, in-place]
 
 # Insertion Sort
 
+{% if page.tags and page.tags.size > 0 %}
+<p>
+{% for tag in page.tags %}
+  <span style="display:inline-block;padding:0.2rem 0.5rem;margin:0.1rem 0.25rem 0.1rem 0;border-radius:999px;font-size:0.8rem;background:#e2e8f0;color:#1e293b;">#{{ tag }}</span>
+{% endfor %}
+</p>
+{% endif %}
+
 ## What it does
 Insertion Sort builds a sorted prefix of the array one element at a time. For each position, it takes the current value and shifts larger values in the sorted prefix to the right, then inserts the value in the correct spot. It is simple, stable, and in-place, making it great for small inputs.
 
